@@ -81,7 +81,7 @@ public class Enemy : MonoBehaviour
         bullet.GetComponent<Bullet>().is_EnemyBullet = true;
         if(canShoot)
         {
-            Invoke("startshoot", Random.Range(0.5f, 0.9f));
+            Invoke("startshoot", Random.Range(0.3f, 0.8f));
 
         }
     }

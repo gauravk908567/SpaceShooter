@@ -46,13 +46,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if(target.tag=="Bullet"||target.tag=="Enemy")
+        if (target.tag == "Bullet" || target.tag == "Enemy")
         {
+
             gameObject.SetActive(false);
-        }
+        }   
+
     }
-
-
 
 }//class
  
