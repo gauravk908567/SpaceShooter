@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Main_Menu : MonoBehaviour
 {
-   public void PlayBtn()
+    public void PlayBtn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    
+
     public void ExitBtn()
     {
-        Debug.Log("Exit");
-        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        Application.OpenURL("https://gauravk908567.itch.io/");
     }
 }
